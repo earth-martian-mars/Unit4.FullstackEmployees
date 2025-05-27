@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "test:server": "vitest server",
     "db:schema": "psql -d fullstack_employees -f db/schema.sql",
     "db:seed": "node --env-file=.env db/seed.js",
     "db:reset": "npm run db:schema && npm run db:seed"
@@ -14,6 +15,7 @@
   "dependencies": {
     "dotenv": "^16.5.0",
     "env": "^0.0.2",
-    "pg": "^8.16.0"
+    "pg": "^8.16.0",
+    "vitest": "^3.1.4"
   }
 }
